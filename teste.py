@@ -3,7 +3,7 @@
 from selenium import webdriver
 
 driver = webdriver.Chrome()
-driver.get('https://www.todamateria.com.br/')
+driver.get('https://cursoautomacao.netlify.app/')
 
 
 
