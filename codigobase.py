@@ -21,7 +21,7 @@ def iniciar_driver():
     for argument in arguments:
         chrome_options.add_argument(argument)
 
-    caminho_padrao_para_download = 'E:\\Storage\\Desktop'
+    caminho_padrao_para_download = 'C:\\Users\\carlo\\Desktop\\CURSO automação com python\\download'
 
     # Lista de opções experimentais(nem todas estão documentadas) https://chromium.googlesource.com/chromium/src/+/32352ad08ee673a4d43e8593ce988b224f6482d3/chrome/common/pref_names.cc
     chrome_options.add_experimental_option("prefs", {
