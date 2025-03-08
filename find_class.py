@@ -8,7 +8,7 @@ def iniciar_driver():
     # Fonte de opções de switches https://peter.sh/experiments/chromium-command-line-switches/
 
     arguments = ['--lang=pt-BR', '--window-size=1000, 900',
-                '--incognito' ]
+                '--incognito']
                 
     
     ''' Common arguments
@@ -43,14 +43,16 @@ def iniciar_driver():
 driver = iniciar_driver()
 driver.get('https://cursoautomacao.netlify.app/')
 
-campo_nome = driver.find_element(By.NAME,'seu-nome')
-varios_elementos = driver.find_elements(By.NAME, 'exampleRadios')
+logo = driver.find_element(By.CLASS_NAME, 'navbar-brand')
+links_menu = driver.find_elements(By.CLASS_NAME, 'nav-link')
 
-if campo_nome is not None:
-    print('Foi encontrado - NOME')
 
-if varios_elementos is not None:
-    print('Foi encontrado - VARIOS ELEMNTOS (RADIO)')
+
+if logo is not None:
+    print('logo encontrada')
+if links_menu is not None:
+    print('links de navegação - encontrados')
+
 
 input('')
 driver.close()
