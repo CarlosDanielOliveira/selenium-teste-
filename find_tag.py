@@ -43,10 +43,14 @@ def iniciar_driver():
 driver = iniciar_driver()
 driver.get('https://cursoautomacao.netlify.app/')
 
-texto = driver.find_element(By.XPATH, '//*[text()="ZONA DE TESTES"]' ) #Cuidado com aspas
+titulo_pela_tag =  driver.find_element(By.TAG_NAME, 'h1')
+tag_geral = driver.find_elements(By.TAG_NAME, 'h4')
 
-if texto:
-    print( f'Encontrato -> {texto.text}')
+if titulo_pela_tag:
+    print(f'Encontramos!')
+if tag_geral:
+    print(f'Encontramos todos!')
+
 
 input('')
 driver.close()

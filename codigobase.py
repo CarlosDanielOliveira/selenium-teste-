@@ -1,13 +1,15 @@
 # selenium 4
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 def iniciar_driver():
     chrome_options = Options()
     # Fonte de opções de switches https://peter.sh/experiments/chromium-command-line-switches/
 
-    arguments = ['--lang=pt-BR', '--window-size=800,600',
-                '--incognito']
+    arguments = ['--lang=pt-BR', '--window-size=1000, 900',
+                '--incognito', '--headless' ]
+                
     
     ''' Common arguments
     --start-maximized # Inicia maximizado
@@ -40,4 +42,7 @@ def iniciar_driver():
 
 driver = iniciar_driver()
 driver.get('https://cursoautomacao.netlify.app/')
+
+
 input('')
+driver.close()
