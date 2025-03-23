@@ -43,7 +43,9 @@ def iniciar_driver():
 driver = iniciar_driver()
 driver.get('https://cursoautomacao.netlify.app/')
 
-texto = driver.find_element(By.XPATH, '//*[text()="ZONA DE TESTES"]' ) #Cuidado com aspas
+texto = driver.find_element(By.XPATH, '//*[text()="ZONA DE TESTES"]'  ) #Cuidado com aspas #site base: https://devhints.io/xpath
+# Or -> //button[@id='btnEnviarDados']
+
 
 if texto:
     print( f'Encontrato -> {texto.text}')
